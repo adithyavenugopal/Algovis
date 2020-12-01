@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Algovis/static/css/main.07bfca03.chunk.css",
+    "main.js": "/Algovis/static/js/main.d2d7800f.chunk.js",
+    "main.js.map": "/Algovis/static/js/main.d2d7800f.chunk.js.map",
+    "runtime-main.js": "/Algovis/static/js/runtime-main.e6dd4a6d.js",
+    "runtime-main.js.map": "/Algovis/static/js/runtime-main.e6dd4a6d.js.map",
+    "static/js/2.f491fa97.chunk.js": "/Algovis/static/js/2.f491fa97.chunk.js",
+    "static/js/2.f491fa97.chunk.js.map": "/Algovis/static/js/2.f491fa97.chunk.js.map",
+    "index.html": "/Algovis/index.html",
+    "static/css/main.07bfca03.chunk.css.map": "/Algovis/static/css/main.07bfca03.chunk.css.map",
+    "static/js/2.f491fa97.chunk.js.LICENSE.txt": "/Algovis/static/js/2.f491fa97.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e6dd4a6d.js",
+    "static/js/2.f491fa97.chunk.js",
+    "static/css/main.07bfca03.chunk.css",
+    "static/js/main.d2d7800f.chunk.js"
+  ]
+}
