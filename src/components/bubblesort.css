@@ -1,0 +1,68 @@
+.appContainer{
+    display:flex;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+}
+.arrayContainer{
+    background:#801336;
+    margin: 0;
+    padding: 0;
+    width: 75%;
+    height: 100%;
+    display:flex;
+    flex-direction: row;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+.displayMenu{
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-end;
+    background: #801336;
+    box-sizing: border-box;
+    border-left: 1px solid #2d132c; 
+}
+
+.displayMenuItem{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5%;
+    color: #EEEEEE;
+}
+
+.displayMenuLog{
+    margin-bottom: auto;
+    height: 50%;
+    background:  #801336;
+    border-bottom: 1px solid #2d132c;
+    color:  black;
+}
+
+.logtag{
+    background: #2d132c;
+    color: #ee4540;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 5%;
+}
+
+.displayMenuItem:hover{
+    cursor: pointer;
+    background: #2d132c;
+}
+
+.arrayComponent{
+    background: #ee4540;
+    margin: 1px;
+    padding: 0;
+}

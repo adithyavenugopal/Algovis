@@ -1,0 +1,88 @@
+html,body,#root{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    color: #EEEEEE;
+}
+.mainContainer{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    background: purple;
+    align-items: stretch;
+}
+.topBar{
+    width: 100%;
+    height: 10%;
+    background:#2d132c;
+    box-sizing: border-box;
+    border-bottom: 1px solid #801336;
+    color: #c72c41;
+}
+
+.leftBar{
+    width: 15%;
+    height: 80%;
+    background: #2d132c;
+    box-sizing: border-box;
+    border-right: 1px solid #801336;
+}
+
+.leftbarItem{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5%;
+    color: #EEEEEE;
+}
+
+.leftbarItem:hover{
+    cursor: pointer;
+    background: #801336;
+}
+
+.midBar{
+    width: 70%;
+    height: 80%;
+    background: #2d132c;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.midBarappdisplay{
+    height: 100%;
+    width: 75%;
+}
+
+.midBarappmenu{
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    height: 100%;
+
+    background: #c72c41;
+}
+
+.rightBar{
+    width: 15%;
+    height: 80%;
+    background: #2d132c;
+    box-sizing: border-box;
+    border-left: 1px solid #801336;
+}
+
+.bottomBar{
+    width: 100%;
+    height: 10%;
+    background:#2d132c;
+    box-sizing: border-box;
+    border-top: 1px solid #801336;
+}

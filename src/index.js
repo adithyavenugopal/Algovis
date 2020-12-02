@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Sort from './components/sort';
+import Layout from './components/layout';
 ReactDOM.render(
   <>
-
-    <Sort />
+    <Layout />
   </>,
   document.getElementById('root')
 );
