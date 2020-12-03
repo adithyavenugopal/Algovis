@@ -12,77 +12,64 @@ html,body,#root{
     width: 100%;
     display:flex;
     flex-wrap: wrap;
-    background: purple;
+    background: black;
     align-items: stretch;
 }
 .topBar{
     width: 100%;
-    height: 10%;
-    background:#2d132c;
+    height: 5%;
+    background: #263238;
     box-sizing: border-box;
-    border-bottom: 1px solid #801336;
-    color: #c72c41;
+    color: #ECEFF1;
+    font-size: 10px;
 }
 
 .leftBar{
     width: 15%;
-    height: 80%;
-    background: #2d132c;
+    height: 85%;
+    padding-top: 20px;
+    background: #263238;
     box-sizing: border-box;
-    border-right: 1px solid #801336;
 }
 
 .leftbarItem{
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
+    padding: 10px;
     height: 5%;
-    color: #EEEEEE;
+    color: #ECEFF1;
+    font-size: 12px;
 }
 
 .leftbarItem:hover{
     cursor: pointer;
-    background: #801336;
+    background: #37474F;
 }
 
 .midBar{
     width: 70%;
-    height: 80%;
-    background: #2d132c;
+    height: 85%;
+    background: #ECEFF1;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     box-sizing: border-box;
 }
 
-.midBarappdisplay{
-    height: 100%;
-    width: 75%;
-}
-
-.midBarappmenu{
-    margin: 0;
-    padding: 0;
-    width: 25%;
-    height: 100%;
-
-    background: #c72c41;
-}
 
 .rightBar{
     width: 15%;
-    height: 80%;
-    background: #2d132c;
+    height: 85%;
+    background: #263238;
     box-sizing: border-box;
-    border-left: 1px solid #801336;
 }
 
 .bottomBar{
     width: 100%;
     height: 10%;
-    background:#2d132c;
+    background:#263238;
     box-sizing: border-box;
-    border-top: 1px solid #801336;
 }

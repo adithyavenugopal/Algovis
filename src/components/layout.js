@@ -36,11 +36,11 @@ export default class Layout extends React.Component{
                     <h1>AlgoVis</h1>
                 </div>
                 <div className = "leftBar">
-                    <div class = "leftbarItem" onClick = {() => this.setState({app : "BubbleSort"})}><h4>BUBBLE SORT</h4></div>
-                    <div class = "leftbarItem" onClick = {() => this.setState({app : "BFS"})}><h4>BFS</h4></div>
-                    <div class = "leftbarItem" ><h4>MERGE SORT</h4></div>
-                    <div class = "leftbarItem" ><h4>QUICK SORT</h4></div>
-                    <div class = "leftbarItem" ><h4>COUNT SORT</h4></div>
+                    <div className = "leftbarItem" onClick = {() => this.setState({app : "BubbleSort"})}>Bubble Sort</div>
+                    <div className = "leftbarItem" >Breadth First Search</div>
+                    <div className = "leftbarItem" >PlaceHolder</div>
+                    <div className = "leftbarItem" >PlaceHolder</div>
+                    <div className = "leftbarItem" >PlaceHolder</div>
                 </div>
                 <div className = "midBar">
                     {this.displayed_app()}
