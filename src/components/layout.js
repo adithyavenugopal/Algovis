@@ -2,7 +2,6 @@ import React from "react";
 import BubbleSort from './Algorithms/BubbleSort/bubblesort.jsx';
 import MergeSort from './Algorithms/Mergesort/mergesort.jsx';
 import SelectionSort from './Algorithms/SelectionSort/selectionsort.jsx'
-import BFS from "./BFS";
 import './layout.css';
 
 export default class Layout extends React.Component{
@@ -27,8 +26,6 @@ export default class Layout extends React.Component{
                 return (<MergeSort />);
             case "SelectionSort":
                 return (<SelectionSort />);
-            case "BFS":
-                return (<BFS />);
             default:
                 return (<></>);
         }
