@@ -1,5 +1,7 @@
 import React from "react";
-import BubbleSort from './BubbleSort';
+import BubbleSort from './Algorithms/BubbleSort/bubblesort.jsx';
+import MergeSort from './Algorithms/Mergesort/mergesort.jsx';
+import SelectionSort from './Algorithms/SelectionSort/selectionsort.jsx'
 import BFS from "./BFS";
 import './layout.css';
 
@@ -21,6 +23,10 @@ export default class Layout extends React.Component{
                 </div>);
             case "BubbleSort":
                 return (<BubbleSort />);
+            case "MergeSort":
+                return (<MergeSort />);
+            case "SelectionSort":
+                return (<SelectionSort />);
             case "BFS":
                 return (<BFS />);
             default:
@@ -37,8 +43,9 @@ export default class Layout extends React.Component{
                 </div>
                 <div className = "leftBar">
                     <div className = "leftbarItem" onClick = {() => this.setState({app : "BubbleSort"})}>Bubble Sort</div>
-                    <div className = "leftbarItem" >Breadth First Search</div>
-                    <div className = "leftbarItem" >PlaceHolder</div>
+                    <div className = "leftbarItem" onClick = {() => this.setState({app : "SelectionSort"})}>Selection Sort</div>
+                    <div className = "leftbarItem" onClick = {() => this.setState({app : "MergeSort"})}>Merge Sort</div>
+
                     <div className = "leftbarItem" >PlaceHolder</div>
                     <div className = "leftbarItem" >PlaceHolder</div>
                 </div>

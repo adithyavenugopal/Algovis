@@ -1,5 +1,5 @@
 import React from "react";
-import "./bubblesort.css";
+import "./bubblesort_old.css";
 import {Slider} from "./uxcomponents/slider/slider.jsx";
 
 var speed = 250;

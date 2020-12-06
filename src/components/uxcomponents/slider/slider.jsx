@@ -3,7 +3,7 @@ import "./slider.css"
 
 export function Slider(props){
 
-    const [sliderVal,setsliderVal] = useState(1);
+    const [sliderVal,setsliderVal] = useState(props.default);
     const [mouseState,setmouseState] = useState(null);
 
     const handleChange = (event) => {
@@ -12,8 +12,13 @@ export function Slider(props){
 
 
     useEffect(()=>{
+        if(props.isEnabled){
         if(mouseState === "up"){
             props.onChange(sliderVal);
+        }
+    }
+        else{
+            console.log("Disabled!");
         }
     });
 
@@ -21,9 +26,9 @@ export function Slider(props){
         <div className = "slidercontainer">
         <input 
             type="range" 
-            min = "1"
-            max = "5"
-            step = "1"
+            min = {props.min}
+            max = {props.max}
+            step = {props.step}
             value = {sliderVal}
             onChange = {props.isEnabled? handleChange : () => {console.log("disabled")}}
             onMouseDown={() => setmouseState("down")}
