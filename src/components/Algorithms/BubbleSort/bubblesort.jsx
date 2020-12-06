@@ -1,7 +1,6 @@
 import React, {Component, useState, useEffect} from "react";
 import "../../uxcomponents/uxstyles.css";
 import {Slider} from "../../uxcomponents/slider/slider.jsx"
-import "./bubblesort.css"
 
 const max_height = 400;
 var simGap = 1000;

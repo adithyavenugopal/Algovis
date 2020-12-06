@@ -1,7 +1,7 @@
 import React, {Component, useState, useEffect} from "react";
 import "../../uxcomponents/uxstyles.css";
 import {Slider} from "../../uxcomponents/slider/slider.jsx"
-import "./selectionsort.css"
+
 
 const max_height = 400;
 var simGap = 1000;
@@ -122,7 +122,7 @@ export default function SelectionSort(props){
                     if(displayVal){
                     arrayComponent_divs[comp1].innerHTML = newheight1;
                     arrayComponent_divs[comp2].innerHTML = newheight2;
-                    }
+                    };
                 },(i+1)*simGap);
                 if(comp1 !== comp2){
                 setTimeout(() => {
