@@ -32,11 +32,35 @@ html,body,#root{
     box-sizing: border-box;
 }
 
-.leftbarItem{
+.leftBarHeading{
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    width: 100%;
+    padding: 10px;
+    height: 5%;
+    color: #ECEFF1;
+    font-size: 12px;
+}
+
+.leftBarDropdown{
+    padding-right: 10px;
+}
+
+.leftBarDropdown:hover{
+    cursor: pointer;
+}
+
+#SortingAlgorithms{
+    display:block;
+}
+
+.leftbarItem{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 10px;
     height: 5%;

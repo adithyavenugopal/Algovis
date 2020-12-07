@@ -7,6 +7,8 @@ var simGap = 1000;
 var array = [];
 var displayVal = true;
 
+var tree = [1,2,3];
+
 const max_height = 400;
 const colors = {
     normal_bar : "#263238",
@@ -17,14 +19,14 @@ const colors = {
 }
 
 
-export default function Sort(props){
+export default function Tree(props){
 
     const [isEnabled,setIsEnabled] = useState(true);
     const [reset,setReset] = useState(true);
     const [simSpeed,setSimSpeed] = useState(1);
-    const [simComps,setSimComps] = useState(10);
-    const [arrayList,setArrayList] = useState([]);
+    const [nodeLevels,setNodeLevels] = useState(1);
     const [trace,setTrace] = useState([]);
+    const [treeNodes,setTreeNodes] = useState([]);
 
     useEffect(() => {
         if(isEnabled)console.log("Sim not running!");
@@ -52,78 +54,41 @@ export default function Sort(props){
         }
     },[simSpeed]);
 
+    useEffect(() => {
+        tree = [];
+        console.log(nodeLevels);
+        let nodes_at_level = 1;
+        const temp_nodes = [];
+        for(let i = 1; i <= nodeLevels;i++){
+            let j = 0;
+            let current_nodes = nodes_at_level;
+            while(j < current_nodes){
+                tree.push(i);
+                temp_nodes.push(
+                    <div className = "treeNode">{i}</div>
+                );
+                nodes_at_level++;
+                j++;
+            };
+        }
+        setTreeNodes(temp_nodes);
+    },[nodeLevels]);
+
     useEffect(() =>{
         //Find a better implementation to clear all timeouts:
-        setTimeout(()=>{
+        var killtimer = setTimeout(()=>{
+            for(let i = killtimer; i > 0; i--) clearTimeout(i);
+            console.log("timerid " + killtimer);
             setIsEnabled(true);
-            const temp_array = [];
-            for(let i = 0;i<simComps;i++){
-                temp_array.push(Math.floor((Math.random() * max_height)+1));
-            }
-            array = temp_array;
-            if(simComps >= 40){
-                displayVal = false;
-            }
-            else{
-                displayVal = true;
-            }
-            setArrayList(array.map((value,idx) => 
-            <div className = "arrayComponent" key = {idx} style = {{height: value/4+"%", width: (100/array.length)+"%"}}>{displayVal ? value : ""}</div>));
-            cleanup();
         },10);
         //-----------------------------------------------------//
-
     },[props])
-
-
-    useEffect(() => {
-
-        setIsEnabled(true);
-        const temp_array = [];
-        for(let i = 0;i<simComps;i++){
-            temp_array.push(Math.floor((Math.random() * max_height)+1));
-        }
-        array = temp_array;
-        if(simComps >= 40){
-            displayVal = false;
-        }
-        else{
-            displayVal = true;
-        }
-        setArrayList(array.map((value,idx) => 
-        <div className = "arrayComponent" key = {idx} style = {{height: value/4+"%", width: (100/array.length)+"%"}}>{displayVal ? value : ""}</div>));
-        cleanup();
-    },[simComps,reset]);
-
-
-    useEffect(() => {
-        props.animations(trace, simGap, displayVal, max_height, colors);
-        setTimeout(()=>{
-            setIsEnabled(true);
-        },(trace.length+1)*simGap);
-    },[trace]);
-
-    const cleanup = () => {
-        const arrayComponent_divs = document.getElementsByClassName("arrayComponent");
-        for(let i = 0;i< arrayComponent_divs.length;i++){
-            arrayComponent_divs[i].style.backgroundColor = colors.normal_bar;
-        }
-    }
-
-    const doSort = (array) => {
-        if(!isEnabled)return;
-        setIsEnabled(false);
-        cleanup();
-        const temp_trace = props.sortingalgorithm(array);
-        setTrace(temp_trace);
-    };
-
 
     return(
         <div className = "appContainer">
             <div className = "appScreenContainer">
                 <div className = "appScreen">
-                    {arrayList}
+                    {treeNodes}
                 </div>
             </div>
             <div className = "appMenuContainer">
@@ -140,17 +105,17 @@ export default function Sort(props){
                     />
                     <p>Number of Components:</p>
                     <Slider 
-                    onChange = {(val)=>{setSimComps(val)}}
+                    onChange = {(val)=>{setNodeLevels(val)}}
                     isEnabled = {isEnabled}
-                    min = "10"
-                    max = "150"
-                    step = "10"
-                    default = "10"
+                    min = "1"
+                    max = "5"
+                    step = "1"
+                    default = "1"
                     />
                 </div>
                 <div className = "appMenuBarContainer">
                     <div className = "appMenuBar">
-                        <div className = "appMenuBarItem" onClick = {isEnabled ? () => {doSort(array)}: console.log("disabled!")}>
+                        <div className = "appMenuBarItem" onClick = {isEnabled ? () => {}: console.log("disabled!")}>
                             Start
                         </div>
                         <div className = "appMenuBarItem" onClick = {isEnabled ? () => {setReset(!reset)}: console.log("disabled")}>
