@@ -1,7 +1,8 @@
 import React from "react";
-import BubbleSort from './Algorithms/BubbleSort/bubblesort.jsx';
-import MergeSort from './Algorithms/Mergesort/mergesort.jsx';
-import SelectionSort from './Algorithms/SelectionSort/selectionsort.jsx'
+import Sort from "./Algorithms/sort.jsx"
+import {bubblesortanim, bubblesortalgorithm} from './Algorithms/SortingAlgorithms/bubblesort.jsx';
+import {animations, mergesortalgorithm} from './Algorithms/SortingAlgorithms/mergesort.jsx';
+import {selectionsortanim, selectionsortalgorithm} from './Algorithms/SortingAlgorithms/selectionsort.jsx'
 import './layout.css';
 
 export default class Layout extends React.Component{
@@ -21,11 +22,16 @@ export default class Layout extends React.Component{
                     <h1> Please Select an Algorithm from the left sidebar</h1>
                 </div>);
             case "BubbleSort":
-                return (<BubbleSort />);
+                return (<Sort animations = {bubblesortanim} sortingalgorithm = {bubblesortalgorithm} />);
             case "MergeSort":
-                return (<MergeSort />);
+                return (<Sort animations = {animations} sortingalgorithm = {mergesortalgorithm} />);
             case "SelectionSort":
-                return (<SelectionSort />);
+                return (<Sort animations = {selectionsortanim} sortingalgorithm = {selectionsortalgorithm} />);
+            case "Test":
+                return (
+                    <div>
+                        <h1> Please Select an Algorithm from the left sidebar</h1>
+                    </div>);
             default:
                 return (<></>);
         }
@@ -43,7 +49,7 @@ export default class Layout extends React.Component{
                     <div className = "leftbarItem" onClick = {() => this.setState({app : "SelectionSort"})}>Selection Sort</div>
                     <div className = "leftbarItem" onClick = {() => this.setState({app : "MergeSort"})}>Merge Sort</div>
 
-                    <div className = "leftbarItem" >PlaceHolder</div>
+                    <div className = "leftbarItem" onClick = {() => this.setState({app: "Test"})} >PlaceHolder</div>
                     <div className = "leftbarItem" >PlaceHolder</div>
                 </div>
                 <div className = "midBar">
