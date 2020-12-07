@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Algovis/static/css/main.a8f3a59d.chunk.css",
-    "main.js": "/Algovis/static/js/main.168319cb.chunk.js",
-    "main.js.map": "/Algovis/static/js/main.168319cb.chunk.js.map",
+    "main.css": "/Algovis/static/css/main.bfa88be8.chunk.css",
+    "main.js": "/Algovis/static/js/main.e63e25f1.chunk.js",
+    "main.js.map": "/Algovis/static/js/main.e63e25f1.chunk.js.map",
     "runtime-main.js": "/Algovis/static/js/runtime-main.e6dd4a6d.js",
     "runtime-main.js.map": "/Algovis/static/js/runtime-main.e6dd4a6d.js.map",
-    "static/js/2.685a1783.chunk.js": "/Algovis/static/js/2.685a1783.chunk.js",
-    "static/js/2.685a1783.chunk.js.map": "/Algovis/static/js/2.685a1783.chunk.js.map",
+    "static/js/2.da751696.chunk.js": "/Algovis/static/js/2.da751696.chunk.js",
+    "static/js/2.da751696.chunk.js.map": "/Algovis/static/js/2.da751696.chunk.js.map",
     "index.html": "/Algovis/index.html",
-    "static/css/main.a8f3a59d.chunk.css.map": "/Algovis/static/css/main.a8f3a59d.chunk.css.map",
-    "static/js/2.685a1783.chunk.js.LICENSE.txt": "/Algovis/static/js/2.685a1783.chunk.js.LICENSE.txt"
+    "static/css/main.bfa88be8.chunk.css.map": "/Algovis/static/css/main.bfa88be8.chunk.css.map",
+    "static/js/2.da751696.chunk.js.LICENSE.txt": "/Algovis/static/js/2.da751696.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e6dd4a6d.js",
-    "static/js/2.685a1783.chunk.js",
-    "static/css/main.a8f3a59d.chunk.css",
-    "static/js/main.168319cb.chunk.js"
+    "static/js/2.da751696.chunk.js",
+    "static/css/main.bfa88be8.chunk.css",
+    "static/js/main.e63e25f1.chunk.js"
   ]
 }
